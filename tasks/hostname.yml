@@ -11,6 +11,14 @@
   # returns an error code (d'oh!) with the empty string stdout that we _want_.
   failed_when: false
 
+- name: mh_hostname
+  debug:
+    var: mh_hostname
+
+- name: mh_current_hostname
+  debug:
+    var: mh_current_hostname
+
 - name: Set macOS HostName.
   command: "scutil --set HostName '{{ mh_hostname }}'"
   become: true
