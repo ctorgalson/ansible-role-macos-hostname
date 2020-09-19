@@ -18,6 +18,6 @@
     mh_hostname is defined
     or (
       mh_current_hostname.stdout is defined
-      and mh_current_hostname.stdout != mh_current_hostname
+      and mh_current_hostname.stdout != mh_hostname
     )
   notify: clear dns cache
