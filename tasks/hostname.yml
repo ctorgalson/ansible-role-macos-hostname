@@ -11,7 +11,7 @@
   # returns an error code (d'oh!) with the empty string stdout that we _want_.
   failed_when: false
 
-- name: Set macOS HostName.
+- name: Set macOS HostName, even when it's an empty string.
   command: "scutil --set HostName '{{ mh_hostname }}'"
   become: true
   when: >
